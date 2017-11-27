@@ -1,0 +1,87 @@
+
+html, body {
+  height: 100%;
+}
+
+.te-form .body {
+  background: #F4F6F8;
+}
+
+input[type="text"] {
+  margin-bottom: 1rem;
+}
+
+.spacer {
+  flex: 2
+}
+
+.options {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-around;
+
+  .option {
+    color: #F4F6F8;
+    padding: 6px 24px;
+    cursor: pointer;
+
+    svg {
+      transform: translateY(25%);
+      fill: #F4F6F8;
+    }
+
+    button {
+      height: 38px;
+      line-height: 36px;
+    }
+  }
+}
+
+.ba-breadcrumb {
+  margin-left: 250px;
+  transition: all .25s;
+  background: #F0F7F4;
+
+  &.maximized {
+    margin-left: 0px;
+  }
+}
+
+.view-container {
+  margin-left: 250px;
+  transition: all .25s;
+  height: ~"calc(100vh - 190px)";
+  background: #F4F6F8;
+  padding: 15px;
+  overflow-y: auto;
+
+  &.maximized {
+    margin-left: 0px;
+  }
+}
+
+.maximize-enter-active {
+  animation: maximize .25s;
+}
+
+.maximize-leave-active {
+  animation: minimize .25s;
+}
+
+@keyframes minimize {
+  0% {
+    margin-left: -250px;
+  }
+  100% {
+    margin-left: 0px;
+  }
+}
+
+@keyframes maximize {
+  0% {
+    margin-left: 0px;
+  }
+  100% {
+    margin-left: -250px;
+  }
+}

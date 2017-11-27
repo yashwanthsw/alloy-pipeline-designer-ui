@@ -1,0 +1,5 @@
+apps:
+  - script: ./server.js
+    name: 'alloy-pipeline-designer-ui'
+    env:
+      NODE_ENV: production
